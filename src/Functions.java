@@ -47,7 +47,7 @@ public class Functions{
     // 3. Given N as an input, display the number of digits it has.
 
     // 3A. Iterative Function
-    public int itecondigit(int intNum1){
+    public int itecoundigit(int intNum1){
         if(intNum1 == 0)
             return 1;
         
