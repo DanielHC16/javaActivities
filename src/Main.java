@@ -6,6 +6,8 @@ public class Main {
     
     public static void main(String[] args) {
         Functions clFunctions = new Functions();
+        Circle circleFunction = new Circle();
+        OverrideCircle ovCircle = new OverrideCircle();
 
         System.out.printf("1A. Iterative Circle Area: %.2f\n", clFunctions.itecirclearea(10));
         System.out.printf("1B. Recursive Circle Area: %.2f\n", clFunctions.reccirclearea(Math.pow(10, 2)));
@@ -39,7 +41,11 @@ public class Main {
         else
             System.out.println("`" + keyToSearch + "` is not fonud in the array");
 
+        System.out.println("Circle Area Int: " + circleFunction.area(10));
+        System.out.println("Circle Area Double: " + circleFunction.area(10.10));
 
+        System.out.println("Overriden Circle Int: " + ovCircle.area(10));
+        System.out.println("Overriden Circle Double: " + ovCircle.area(10.10));
 
     }
 
