@@ -1,6 +1,6 @@
 package src;
 
-public class Circle {
+public class Circle extends Figure implements FigureInterface {
     public double area (double dblRadius){
         return Math.PI * dblRadius * dblRadius;
     } 
@@ -8,6 +8,18 @@ public class Circle {
     public double area(int intRadius){
          return Math.PI * intRadius * intRadius;
      }
+
+     // 9/21/2024
+
+   @Override
+   public void sides() {
+       System.out.println("A Circle has no sides.");
+   }
+  
+   @Override
+   public void shapeName() {
+       System.out.println("Shape: Circle");
+   }
      
  }
 

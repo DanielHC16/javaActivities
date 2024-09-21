@@ -5,6 +5,9 @@ import java.util.Arrays;
 public class Main {
     
     public static void main(String[] args) {
+
+        // Activity on Functions 9/7/2024
+
         Functions clFunctions = new Functions();
         Circle circleFunction = new Circle();
         OverrideCircle ovCircle = new OverrideCircle();
@@ -47,6 +50,47 @@ public class Main {
         System.out.println("Overriden Circle Int: " + ovCircle.area(10));
         System.out.println("Overriden Circle Double: " + ovCircle.area(10.10));
 
-    }
+    
 
+    // Activity on Encap Abstraction 9/21/2024
+
+        new Area("Circle", 10);           // int radius
+        new Area("Circle", 10.0);         // double radius
+        new Area("Rectangle", 10, 10);    // int length, int width
+        new Area("Rectangle", 10.0, 10);  // double length, int width
+        new Area("Rectangle", 10, 10.0);  // int length, double width
+        new Area("Rectangle", 10.0, 10.0);// double length, double width
+
+        // Create objects for different figures
+        Figure circle = new Circle();
+        Figure triangle = new Triangle();
+        Figure hexagon = new Hexagon();
+        Figure pentagon = new Pentagon();
+
+        // Circle
+        circle.description();
+        circle.sides();
+        circle.shapeName();
+        
+        System.out.println(); 
+        // Triangle
+        triangle.description();
+        triangle.sides();
+        triangle.shapeName();
+
+        System.out.println(); 
+
+        // Hexagon
+        hexagon.description();
+        hexagon.sides();
+        hexagon.shapeName();
+
+        System.out.println(); 
+
+        // Pentagon
+        pentagon.description();
+        pentagon.sides();
+        pentagon.shapeName();
+
+    }
 }
