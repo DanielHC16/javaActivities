@@ -1,5 +1,6 @@
 package src;
 
+import java.nio.channels.Pipe.SourceChannel;
 import java.util.Arrays;
 
 public class Main {
@@ -11,6 +12,9 @@ public class Main {
         Functions clFunctions = new Functions();
         Circle circleFunction = new Circle();
         OverrideCircle ovCircle = new OverrideCircle();
+        FunctionDiagram FDFunctions = new FunctionDiagram();
+        OverrideFD ovFunctions = new OverrideFD();
+        Logarithmic lnFunction = new Logarithmic();
 
         System.out.printf("1A. Iterative Circle Area: %.2f\n", clFunctions.itecirclearea(10));
         System.out.printf("1B. Recursive Circle Area: %.2f\n", clFunctions.reccirclearea(Math.pow(10, 2)));
@@ -54,6 +58,12 @@ public class Main {
 
     // Activity on Encap Abstraction 9/21/2024
 
+        // Create objects for different figures
+        FigureAbstract circle = new Circle();
+        FigureAbstract triangle = new Triangle();
+        FigureAbstract hexagon = new Hexagon();
+        FigureAbstract pentagon = new Pentagon();
+
         new Area("Circle", 10);           // int radius
         new Area("Circle", 10.0);         // double radius
         new Area("Rectangle", 10, 10);    // int length, int width
@@ -61,11 +71,6 @@ public class Main {
         new Area("Rectangle", 10, 10.0);  // int length, double width
         new Area("Rectangle", 10.0, 10.0);// double length, double width
 
-        // Create objects for different figures
-        Figure circle = new Circle();
-        Figure triangle = new Triangle();
-        Figure hexagon = new Hexagon();
-        Figure pentagon = new Pentagon();
 
         // Circle
         circle.description();
@@ -91,6 +96,28 @@ public class Main {
         pentagon.description();
         pentagon.sides();
         pentagon.shapeName();
+
+        System.out.println("Int Area Multiplication:" + FDFunctions.area(2));
+        System.out.println("Overriden Int Area Division: " + ovFunctions.area(4, 16));
+        System.out.println("Int Int Area Multiplication: " + FDFunctions.area(2, 4));
+        System.out.println("Double Int Area Multiplication: " + FDFunctions.area(6.8, 10));
+        System.out.println("Double Double Area Multiplication: " + FDFunctions.area(10.12, 12.14));
+        
+        int inputPerfectNumber = 6;
+        if(inputPerfectNumber == FDFunctions.perfectnumber(inputPerfectNumber)){
+            System.out.println("It's a perfect number -> " + FDFunctions.perfectnumber(inputPerfectNumber));
+        } else
+        System.out.println("It's not a prefect number.");
+
+        int nthTermFibo = 10;
+        System.out.println("Entered Term: " + nthTermFibo + " Fibonacci Number: " + FDFunctions.fibonaccirecursion(nthTermFibo));
+
+        int logNum = 16;
+        System.out.println("Logarithmic: " + lnFunction.computeLn(logNum));
+
+
+
+
 
     }
 }

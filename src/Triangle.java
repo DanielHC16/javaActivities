@@ -1,6 +1,6 @@
 package src;
 
-public class Triangle extends Figure implements FigureInterface {
+public class Triangle extends FigureAbstract implements FigureInterface {
 
     @Override
     public void sides() {

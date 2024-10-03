@@ -1,6 +1,6 @@
 package src;
 
-public class Hexagon extends Figure implements FigureInterface {
+public class Hexagon extends FigureAbstract implements FigureInterface {
 
     @Override
     public void sides() {

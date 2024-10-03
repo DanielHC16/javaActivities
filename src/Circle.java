@@ -1,6 +1,6 @@
 package src;
 
-public class Circle extends Figure implements FigureInterface {
+public class Circle extends FigureAbstract implements FigureInterface {
     public double area (double dblRadius){
         return Math.PI * dblRadius * dblRadius;
     } 

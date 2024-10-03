@@ -1,6 +1,6 @@
 package src;
 
-public class Pentagon extends Figure implements FigureInterface {
+public class Pentagon extends FigureAbstract implements FigureInterface {
 
     @Override
     public void sides() {

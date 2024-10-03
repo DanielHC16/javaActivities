@@ -1,6 +1,6 @@
 package src;
 
-public abstract class Figure {
+public abstract class FigureAbstract {
     
 // Common method implementation
     
