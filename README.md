@@ -1,2 +1,3 @@
-First Activity: Recursive Functions
-Second Activity: Inheritance, Encapsulation, Abstraction, and Interface
+- First Activity: Recursive Functions
+- Second Activity: Inheritance, Encapsulation, Abstraction, and Interface
+- Third Activity: Working with Class diagrams
